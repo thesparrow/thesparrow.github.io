@@ -20,7 +20,7 @@ export class AppComponent {
   }
 
   //add a new todo item 
-  addToDo(){
+  addTodo(){
     this.todoDataService.addTodo(this.newTodo);
     this.newTodo = new Todo();
   }
