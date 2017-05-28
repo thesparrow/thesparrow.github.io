@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
-import { Todo} from './todo';
+import { Todo } from './todo';
 import {TodoDataService} from './todo-data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [TodoDataService]
+  providers: []
 })
 
 export class AppComponent {
-  
-  newTodo: Todo = new Todo(); 
+   
   // Inject the dependency associated with the injection token 'TodoDataService'
   // assign it to a property called 'todoDataService'
 
@@ -19,24 +18,22 @@ export class AppComponent {
 
   }
 
-  //add a new todo item 
-  addTodo(){
-    this.todoDataService.addTodo(this.newTodo);
-    this.newTodo = new Todo();
+  //handle event emitted by TodoListHeaderComponent
+  onAddTodo(todo: Todo){
+    this.todoDataService.addTodo(todo); 
   }
   
   // service is now available as this.todoDataService
-  toggleTodoComplete(todo){
+  onToggleTodoComplete(todo: Todo){
   	this.todoDataService.toggleTodoComplete(todo);
   }
 
-  removeTodo(todo){
+  onRemoveTodo(todo){
     this.todoDataService.deleteTodoById(todo.id);
   }
 
   get todos(){
     return this.todoDataService.getAllTodos();
   }
-
-  title = 'app works!';
+  
 }
