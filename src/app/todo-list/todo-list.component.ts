@@ -6,6 +6,7 @@ import { Todo } from '../todo';
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css']
 })
+
 export class TodoListComponent {
 
   @Input()

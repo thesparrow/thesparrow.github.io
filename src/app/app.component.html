@@ -1,16 +1,7 @@
 <section class="todoapp">
-
-    <!-- call the dumb component with app-todo-list-header -->
-    <app-todo-list-header (add)="onAddTodo($event)"> </app-todo-list-header>
+    <app-todo-list-header (add)="onAddTodo($event)"></app-todo-list-header>
     
-    <!-- section is to replaced with app-todo-list-->
-    <app-todo-list [todos] = "todos" 
-                   (toggleComplete) = "onToggleTodoComplete($event)"
-                   (remove) = "onRemoveTodo($event)">
-    </app-todo-list>
+    <app-todo-list [todos]="todos" (toggleComplete)="onToggleTodoComplete($event)" (remove)="onRemoveTodo($event)"></app-todo-list>
     
-    <!-- Add the footer --> 
-    <app-todo-list-footer [todos] = "todos"></app-todo-list-footer> 
-
+    <app-todo-list-footer [todos]="todos"></app-todo-list-footer>
 </section>
-
