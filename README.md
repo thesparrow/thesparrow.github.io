@@ -1,6 +1,6 @@
-# TodoApp
+# To-do App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3. Use the Angular CLI commands to take care of the build for you. 
 
 ## Development server
 
@@ -26,4 +26,4 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# thesparrow.github.io
+
